@@ -6,7 +6,6 @@ Every adult human on Earth votes on planetary-scale issues — climate, AI gover
 
 🌍 **Live platform:** [theplanetsvote.org](https://theplanetsvote.org)  
 💻 **Shadow votes:** [theplanetsvote.org/world_vote.html](https://theplanetsvote.org/world_vote.html)  
-📄 **White Paper v1.10:** [theplanetsvote.org/The-Planets-Vote_WhitePaper_v1_10.pdf](https://theplanetsvote.org/The-Planets-Vote_WhitePaper_v1_10.pdf)
 
 ---
 
