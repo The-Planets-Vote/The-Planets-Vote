@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Governance — The Planet's Vote</title>
+<meta name="description" content="Governance of The Planet's Vote Inc. — an incorporated not-for-profit association in Queensland, Australia, governed by a seven-member management committee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@200;300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void: #050810;
+  --deep: #080e1a;
+  --panel: #0b1524;
+  --rim: #112035;
+  --accent: #4fb3d4;
+  --gold: #c9a84c;
+  --crisis: #e05a5a;
+  --text: #d4e8f5;
+  --muted: #4a6d8a;
+  --soft: #8aadcc;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--void);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+nav {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.2rem 2rem;
+  background: rgba(5,8,16,.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rim);
+}
+.nav-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+.nav-links { list-style: none; display: flex; gap: 1.8rem; }
+.nav-links a {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .75rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .25s;
+}
+.nav-links a:hover { color: var(--text); }
+section { padding: 6rem 2rem; }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-label {
+  display: flex; align-items: center; gap: .7rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .72rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.4rem;
+}
+.section-label::before { content: ""; width: 34px; height: 1px; background: var(--gold); }
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  line-height: 1.15;
+  margin-bottom: 1.6rem;
+}
+.section-title em { font-style: italic; color: var(--accent); }
+.lede { color: var(--soft); max-width: 720px; font-size: 1.05rem; margin-bottom: 3rem; }
+.inc-strip {
+  display: flex; flex-wrap: wrap; gap: 2.5rem;
+  padding: 1.6rem 1.8rem;
+  background: var(--panel);
+  border: 1px solid var(--rim);
+  border-left: 2px solid var(--gold);
+  margin-bottom: 4rem;
+}
+.inc-item .k {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .35rem;
+}
+.inc-item .v { font-size: .98rem; color: var(--text); font-weight: 300; }
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+  margin-bottom: 3.5rem;
+}
+.member {
+  background: var(--deep);
+  border: 1px solid var(--rim);
+  padding: 2rem 1.8rem;
+  transition: border-color .3s;
+}
+.member:hover { border-color: var(--accent); }
+.member .role {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .8rem;
+}
+.member .name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  margin-bottom: .5rem;
+}
+.member .note { color: var(--muted); font-size: .88rem; }
+.principle {
+  border-top: 1px solid var(--rim);
+  padding-top: 2.5rem;
+  max-width: 780px;
+}
+.principle h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.principle p { color: var(--soft); margin-bottom: 1rem; }
+.principle a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(79,179,212,.35); }
+.principle a:hover { border-bottom-color: var(--accent); }
+.btn-primary {
+  display: inline-block;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--void);
+  background: var(--accent);
+  padding: .9rem 1.6rem;
+  text-decoration: none;
+  transition: background .25s;
+  margin-top: 1.2rem;
+}
+.btn-primary:hover { background: var(--text); }
+footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 2.5rem 2rem;
+  border-top: 1px solid var(--rim);
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--soft);
+}
+.footer-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .08em;
+  color: var(--muted);
+  text-align: right;
+  line-height: 1.9;
+}
+.footer-text a { color: var(--soft); text-decoration: none; }
+.footer-text a:hover { color: var(--text); }
+@media (max-width: 600px) {
+  section { padding: 5rem 1.5rem; }
+  .nav-links { gap: 1rem; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+  .footer-text { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div style="display:flex;align-items:center;gap:.7rem;">
+    <a href="index.html" class="nav-logo">The Planet's Vote</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#problem">The Problem</a></li>
+    <li><a href="index.html#how">How It Works</a></li>
+    <li><a href="index.html#story">The Story</a></li>
+    <li><a href="ThePlanetsVote_WhitePaper_v2.pdf" target="_blank">White Paper</a></li>
+  </ul>
+</nav>
+
+<!-- GOVERNANCE -->
+<section id="governance">
+  <div class="container">
+    <div class="section-label">Governance</div>
+    <h2 class="section-title">A platform this ambitious<br><em>answers to more than one person.</em></h2>
+    <p class="lede">The Planet's Vote is a registered not-for-profit association under Queensland's Associations Incorporation Act 1981. Authority over the organisation rests with its management committee — not with any individual, including its founder.</p>
+
+    <div class="inc-strip">
+      <div class="inc-item">
+        <div class="k">Legal Name</div>
+        <div class="v">The Planet's Vote Inc.</div>
+      </div>
+      <div class="inc-item">
+        <div class="k">Incorporation Number</div>
+        <div class="v">IA4965877</div>
+      </div>
+      <div class="inc-item">
+        <div class="k">Jurisdiction</div>
+        <div class="v">Queensland, Australia</div>
+      </div>
+      <div class="inc-item">
+        <div class="k">Incorporated</div>
+        <div class="v">2 July 2026</div>
+      </div>
+      <div class="inc-item">
+        <div class="k">Structure</div>
+        <div class="v">Seven-member management committee</div>
+      </div>
+    </div>
+
+    <div class="section-label">Executive Committee</div>
+    <div class="committee-grid">
+      <div class="member">
+        <div class="role">President</div>
+        <div class="name">Paul Innes</div>
+        <div class="note">Founder</div>
+      </div>
+      <div class="member">
+        <div class="role">Treasurer</div>
+        <div class="name">Joana Corod</div>
+      </div>
+      <div class="member">
+        <div class="role">Secretary</div>
+        <div class="name">Rachael Bailes</div>
+      </div>
+    </div>
+
+    <div class="principle">
+      <h3>The Founder's Equality Principle</h3>
+      <p>The Planet's Vote recognises no permanent founder authority. The founder's role is limited to establishing the platform and its initial organisational structure. The executive roles above sit within a seven-member management committee, and no individual — the founder included — holds special voting rights, veto power, or privileged authority over the platform's democratic processes.</p>
+      <p>Committee governance was in place before the platform's first vote, not after. The full principle, and the constitutional safeguards that enforce it, are set out in Part V of the White Paper.</p>
+      <a href="ThePlanetsVote_WhitePaper_v2.pdf" target="_blank" class="btn-primary">Read the White Paper</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">The Planet's Vote</div>
+  <div class="footer-text">
+    <a href="https://github.com/The-Planets-Vote/The-Planets-Vote" target="_blank">github.com/The-Planets-Vote/The-Planets-Vote</a><br>
+    © 2026 The Planet's Vote Inc. (IA4965877) · CC BY 4.0 · <a href="https://theplanetsvote.org" target="_blank">theplanetsvote.org</a>
+  </div>
+</footer>
+
+</body>
+</html>
