@@ -149,6 +149,7 @@ Cairns, Far North Queensland, Australia
 Quadriplegic disability advocate since 1988  
 [founder@theplanetsvote.org](mailto:founder@theplanetsvote.org)
 
+
 *In The Planet's Vote, I would be just another voter. I seek no control.*
 
 ---
